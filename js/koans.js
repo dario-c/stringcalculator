@@ -1,0 +1,9 @@
+
+describe("The application", function(){
+  it("receives text without an email and returns the text unchanged", function() {
+    expect(normalizeCamouflagedEmails("string")).toBe("string");
+  });
+
+ 
+
+})
