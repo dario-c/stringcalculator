@@ -1,7 +1,7 @@
 
-describe("The application", function(){
-  it("receives text without an email and returns the text unchanged", function() {
-    expect(normalizeCamouflagedEmails("string")).toBe("string");
+describe("The Awesome Transformer(tm)", function(){
+  it("Return a number when passed an number as text", function() {
+    expect(transformTextToNumber("10")).toBe(10);
   });
 
  
