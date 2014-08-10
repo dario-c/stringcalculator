@@ -1,6 +1,5 @@
 function calculator(text) {
   var text = text;
-  // transformTextToNumber(text);
   findOperators(text);
   splitStringToNumerals(text, operatorIndex);
   performMathOperation(firstNumeral, operator, secondNumeral)
@@ -18,12 +17,12 @@ var operatorIndex;
 var mathOperators = ['+', '-', '*', '/'];
 function findOperators(text) {
   for (var i = 0; i < mathOperators.length; i++) {
+    operatorIndex = text.length;
+    firstNumeral = transformTextToNumber(text);
     if (text.indexOf(mathOperators[i]) != -1) {
       operator = mathOperators[i];
       operatorIndex = text.indexOf(mathOperators[i]);
       return [operator, operatorIndex];
-    } else {
-      firstNumeral = transformTextToNumber(firstNumeral);
     }
   };
 }
@@ -40,16 +39,15 @@ function splitStringToNumerals(text, i) {
 
 var result;
 function performMathOperation(firstNumeral, operator, secondNumeral) {
-  if (operator = '+') {
+  if (operator == "+") {
     result = firstNumeral + secondNumeral;
-  } else if (operator = '-') {
+  } else if (operator == "-") {
     result = firstNumeral - secondNumeral;
-  } else if (operator = '*') {
+  } else if (operator == "*") {
     result = firstNumeral * secondNumeral;
-  } else if (operator = '/') {
+  } else if (operator == "/") {
     result = firstNumeral / secondNumeral;
   } else {
-    console.log("operator not found");
     result = "operator not found";
   }
 
