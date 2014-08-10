@@ -1,5 +1,5 @@
 function calculator(text) {
-  var text = text;
+  // var text = text;
   findOperators(text);
   splitStringToNumerals(text, operatorIndex);
   performMathOperation(firstNumeral, operator, secondNumeral)
